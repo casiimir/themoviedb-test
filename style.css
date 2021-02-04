@@ -1,0 +1,123 @@
+* {
+  font-size: 18px;
+}
+
+body {
+  margin: 0; padding: 0;
+}
+
+main {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center;*/
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  justify-items: center;
+  grid-gap: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+main div {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  color: black;
+  border-radius: 8px;
+  margin: 6px;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+main div h3 {
+  position: absolute;
+  top: -31px;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .35);
+  color: white;
+  font-size: 1.7rem;
+  text-align: center;
+  text-shadow: 2px 3px 1px rgb(0, 0, 0);
+}
+
+main div img {
+  position: absolute;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+  opacity: .95;
+  z-index: -1;
+  transition: opacity .25s ease-in-out;
+}
+
+main div p {
+  padding: 20px;
+  font-size: 1rem;
+  transform: translateY(-20px);
+  opacity: 0;
+  overflow: hidden;
+}
+
+main div em {
+  display: block;
+  text-align: center;
+  opacity: 0;
+}
+
+main div:hover img {
+  opacity: 0.2;
+}
+
+main div:hover h3 {
+  opacity: 0;
+}
+
+main div:hover p,
+main div:hover em {
+  opacity: 1;
+}
+
+.printListBtn {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: auto;
+  width: 100px;
+  height: 30px;
+  border: 0;
+  border-radius: 8px;
+  background: lightsalmon;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+}
+
+.printListBtn:hover {
+  background: salmon;  
+}
+
+.printListBtn:active {
+  box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.isNotVisibile {
+  display: none;
+}
+
+@media(min-width: 676px) {
+  main {
+    margin: 0 100px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  main div {
+    width: 200px;
+    height: 300px;
+  }
+  main div p {
+    font-size: .8rem;
+  }
+}
