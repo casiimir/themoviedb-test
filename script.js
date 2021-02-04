@@ -40,7 +40,7 @@ function getOtherThings() {
 
 // INIT
 const authData = {
-  apiKEY: '696db31b9a852f60d5897e6aa7856b0d',
+  apiKEY: '3e097ab0145d7f55f3ad142f59498fb7',
   requestToken: null,
 }
 let { apiKEY, requestToken } = authData;
